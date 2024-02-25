@@ -1,0 +1,14 @@
+version: '2'
+services:
+  postgres:
+    image: 'postgis/postgis:13-3.1'
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+# If you need any of the actual data from the volumes: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+volumes:
+  postgres_data:
