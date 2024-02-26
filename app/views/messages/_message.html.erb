@@ -5,6 +5,11 @@
       <p class="text-xs leading-5 text-gray-500"><%= l(message.created_at, format: :short) %></p>
     </div>
     <div class="text-sm leading-6 text-gray-900"><%= message.body %></div>
-    <div class="text-sm leading-6 text-gray-900"><%= likes(message, user) %></div>
+    <div class="text-sm leading-6 text-gray-900">
+      <%= link_to like_message_path(message), data: { "turbo-method": :post } do %>
+        <%= render partial: "messages/heart", locals: { user: user, message: message } %>
+        <%= render partial: "messages/likes_count", locals: { message: message } %>
+      <% end %>
+    </div>
   </div>
 </div>
