@@ -1,0 +1,10 @@
+<div class="shadow overflow-hidden border-b border-gray-200 my-3 sm:rounded-lg">
+  <div class="flex flex-row items-center justify-between m-3 ">
+    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-center">
+      <p class="text-sm leading-6 text-gray-900"><%= message.user.email %></p>
+      <p class="text-xs leading-5 text-gray-500"><%= l(message.created_at, format: :short) %></p>
+    </div>
+    <div class="text-sm leading-6 text-gray-900"><%= message.body %></div>
+    <div class="text-sm leading-6 text-gray-900"><%= likes(message) %></div>
+  </div>
+</div>
