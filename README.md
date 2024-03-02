@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Chat Application with Turbo and Hotwire
 
-Things you may want to cover:
+This is a chat application built with Ruby, JavaScript, and Turbo. 
+It uses Docker-Compose for PostgreSQL.
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+- Ruby
+- JavaScript
+- Docker
+- PostgreSQL
 
-* Configuration
+### Setup
 
-* Database creation
+1. Bundle install
+```bash
+bundle install
+```
 
-* Database initialization
+2. Create the database
 
-* How to run the test suite
+```bash
+rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Migrate the database
 
-* Deployment instructions
+```bash
+rails db:migrate
+```
 
-* ...
+4. Start the application
+```bash
+docker-compose up
+```
+
+5. Open the application in your browser
+```bash
+http://localhost:3000
+```
+
